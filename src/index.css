@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand: #00FF00;
+  --color-brand-muted: #1a331a;
+  --color-surface: #151619;
+  --color-surface-light: #1c1e22;
+  --color-surface-lighter: #262a30;
+  --color-text-dim: #8e9299;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-white antialiased selection:bg-brand selection:text-black;
+  }
+}
+
+.glass-nav {
+  @apply bg-surface/80 backdrop-blur-md border-b border-white/5;
+}
+
+.game-card-gradient {
+  @apply absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80;
+}
+
+.btn-primary {
+  @apply bg-brand text-black font-semibold py-2 px-6 rounded-md hover:brightness-110 transition-all active:scale-95;
+}
+
+.btn-secondary {
+  @apply bg-surface-lighter text-white font-medium py-2 px-6 rounded-md hover:bg-surface-light transition-all;
+}
+
